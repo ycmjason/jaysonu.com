@@ -1,0 +1,21 @@
+.fullpageish {
+  &__section {
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  &__container {
+    max-width: var(--length-container-width);
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 5rem 2rem;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--full-page {
+      min-height: 110vh;
+    }
+  }
+}

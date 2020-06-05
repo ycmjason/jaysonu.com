@@ -17,8 +17,8 @@
     "@vue/compiler-sfc": "^3.0.0-beta.14",
     "autoprefixer": "^9.8.0",
     "postcss-nested": "^4.2.1",
+    "postcss-nested-ancestors": "^2.0.0",
     "typescript": "^3.9.5",
-    "vite": "^0.20.0"
-  },
-  "ka": {}
+    "vite": "^0.20.5"
+  }
 }
