@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "name": "jaysonu.com",
+  "author": "Jason Yu <me@ycmjason.com>",
+  "license": "ISC",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "vue": "^3.0.0-beta.14",
+    "vue-router": "^4.0.0-alpha.12"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.0-beta.14",
+    "autoprefixer": "^9.8.0",
+    "postcss-nested": "^4.2.1",
+    "typescript": "^3.9.5",
+    "vite": "^0.20.0"
+  },
+  "ka": {}
+}

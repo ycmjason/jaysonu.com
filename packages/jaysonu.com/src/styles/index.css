@@ -1,0 +1,64 @@
+@import 'normalize.css';
+@import './icons.css';
+@import './animations.css';
+
+:root {
+  --color-black: #070707;
+  --color-white: #dfdfdf;
+  --color-yellow: #e4d6a7;
+  --color-blue: #2f6690;
+  --color-green: #90a959;
+
+  --color-light-blue: #468dc3;
+
+  --color-background: var(--color-black);
+  --color-foreground: var(--color-white);
+  --color-border: var(--color-white);
+}
+
+html {
+  font-size: 24px;
+  background: var(--color-background);
+  color: var(--color-foreground);
+}
+
+a:link,
+a:visited {
+  color: var(--color-blue);
+}
+a:hover,
+a:active {
+  color: var(--color-light-blue);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Gochi Hand', cursive;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+}
