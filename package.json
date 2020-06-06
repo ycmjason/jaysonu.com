@@ -2,11 +2,14 @@
   "private": true,
   "name": "jayson-u",
   "description": "",
-  "scripts": {},
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build"
+  },
   "keywords": [],
   "author": "Jason Yu <me@ycmjason.com>",
   "license": "ISC",
   "devDependencies": {
-    "lerna": "^3.20.2"
+    "lerna": "^3.22.0"
   }
 }
