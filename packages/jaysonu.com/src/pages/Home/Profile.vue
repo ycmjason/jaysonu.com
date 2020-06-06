@@ -1,5 +1,5 @@
 <template>
-  <div class="profile fullpageish__section fullpageish__section--fullpage">
+  <div class="profile fullpageish__section fullpageish__section--full-page">
     <div class="fullpageish__container">
       <Transition appear appear-active-class="fade-in-top">
         <img alt="Jayson U" src="./assets/jaysonu-dp.jpg" class="profile__dp" />

@@ -2,6 +2,10 @@
   &__section {
     background: var(--color-background);
     color: var(--color-foreground);
+
+    &--full-page {
+      min-height: 110vh;
+    }
   }
 
   &__container {
@@ -13,9 +17,5 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    &--full-page {
-      min-height: 110vh;
-    }
   }
 }
