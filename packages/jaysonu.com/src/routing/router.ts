@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../pages/Home/Home.vue';
-import { watch, watchEffect } from 'vue';
+import { watchEffect } from 'vue';
+
+const SHORT_SONG_URL = [{ short: 'cls', songName: '我要為妳痴總掣' }];
 
 export const router = createRouter({
   history: createWebHistory(),
@@ -9,7 +11,12 @@ export const router = createRouter({
       path: '/',
       component: Home,
     },
+    ...SHORT_SONG_URL.map(({ short, songName }) => ({
+      path: `/s/${short}`,
+      redirect: { name: 'song', params: { songName } },
+    })),
     {
+      name: 'song',
       path: '/songs/:songName',
       props: true,
       component: () => import('../pages/Songs/Song.vue'),
@@ -24,7 +31,7 @@ export const router = createRouter({
       },
     },
     {
-      path: '/*',
+      path: '/:d(.*)',
       component: () => import('../pages/NotFound/NotFound.vue'),
     },
   ],
