@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../pages/Home/Home.vue';
+import { watch, watchEffect } from 'vue';
 
 export const router = createRouter({
   history: createWebHistory(),
@@ -32,3 +33,10 @@ export const router = createRouter({
     return { x: 0, y: 0 };
   },
 });
+
+if (typeof ga === 'function') {
+  watchEffect(() => {
+    ga('set', 'page', router.currentRoute.value.path);
+    ga('send', 'pageview');
+  });
+}
