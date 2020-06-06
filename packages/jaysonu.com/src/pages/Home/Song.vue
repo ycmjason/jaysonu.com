@@ -1,9 +1,11 @@
 <template>
   <div class="song fullpageish__section" :style="song.theme">
     <div class="fullpageish__container">
-      <router-link :to="songLink">
-        <img :alt="`${song.name} picture`" :src="song.pictureUrl" class="song__picture fade-in-top" />
-      </router-link>
+      <Transition appear appear-active-class="fade-in-top">
+        <router-link :to="songLink">
+          <img :alt="`${song.name} picture`" :src="song.pictureUrl" class="song__picture" />
+        </router-link>
+      </Transition>
       <h2 class="song__name">{{ song.name }}</h2>
     </div>
   </div>
@@ -49,6 +51,12 @@ export default defineComponent({
     max-height: 16rem;
     display: block;
     margin: 0 auto;
+    box-shadow: var(--shadow-shallow);
+    transition: var(--transition-duration) ease;
+    transition-property: color, box-shadow, transform;
+    &:hover {
+      box-shadow: var(--shadow-deep);
+    }
   }
 
   &__name {

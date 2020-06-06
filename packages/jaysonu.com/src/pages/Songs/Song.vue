@@ -1,8 +1,10 @@
 <template>
   <section class="song fullpageish__section" :style="song.theme">
     <BackToHome class="song__back-to-home" />
-    <div class="fullpageish__container">
-      <img :alt="`${song.name} picture`" :src="song.pictureUrl" class="song__picture fade-in-top" />
+    <div class="fullpageish__container fullpageish__container">
+      <Transition appear appear-active-class="fade-in-top">
+        <img :alt="`${song.name} picture`" :src="song.pictureUrl" class="song__picture" />
+      </Transition>
       <h1 class="song__name">{{ song.name }}</h1>
 
       <div class="song__links">
@@ -20,6 +22,12 @@
           <i class="gg-music-speaker"></i>
         </a>
       </div>
+    </div>
+  </section>
+  <section class="lyrics fullpageish__section">
+    <div class="fullpageish__container">
+      <pre class="lyrics__lyric">{{ song.lyrics }}</pre>
+      <h2>Lyrics</h2>
     </div>
   </section>
   <section
@@ -110,6 +118,18 @@ export default defineComponent({
     &:last-of-type {
       margin-right: 0;
     }
+  }
+}
+
+.lyrics {
+  --color-background: var(--color-white);
+  --color-foreground: var(--color-blue);
+
+  &__lyric {
+    box-sizing: border-box;
+    border: 0.5rem solid var(--color-foreground);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
   }
 }
 

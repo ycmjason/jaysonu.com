@@ -1,7 +1,9 @@
 <template>
   <div class="profile fullpageish__section fullpageish__section--fullpage">
     <div class="fullpageish__container">
-      <img alt="Jayson U" src="./assets/jaysonu-dp.jpg" class="profile__dp fade-in-top" />
+      <Transition appear appear-active-class="fade-in-top">
+        <img alt="Jayson U" src="./assets/jaysonu-dp.jpg" class="profile__dp" />
+      </Transition>
       <h1>Jayson U</h1>
 
       <section class="profile__links">

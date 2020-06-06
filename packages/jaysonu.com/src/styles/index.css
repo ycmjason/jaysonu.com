@@ -1,4 +1,9 @@
 @import 'normalize.css';
+@import './variables.css';
+@import './icons.css';
+@import './animations.css';
+@import './youtube.css';
+@import './fullpageish.css';
 
 html {
   font-family: 'Gochi Hand', 'Noto Sans HK', sans-serif;
@@ -8,10 +13,19 @@ html {
 a:link,
 a:visited {
   color: var(--color-light-blue);
+  
+  img, i[class^="gg-"] {
+    transition: var(--transition-duration) ease;
+    transition-property: transform;
+  }
 }
 a:hover,
 a:active {
   color: var(--color-lighter-blue);
+
+  img, i[class^="gg-"] {
+      transform: scale(1.05);
+  }
 }
 
 h1 {
@@ -35,4 +49,10 @@ h6 {
 
 img {
   max-width: 100%;
+}
+
+pre {
+  max-width: 100%;
+  white-space: pre-wrap;
+  font-size: 0.8rem;
 }

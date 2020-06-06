@@ -1,12 +1,20 @@
 :root {
   --color-black: #070707;
   --color-white: #dfdfdf;
+
   --color-yellow: #e4d6a7;
-  --color-blue: #2f6690;
-  --color-green: #90a959;
+  --color-dark-yellow: #7d6926;
 
   --color-light-blue: #468dc3;
   --color-lighter-blue: #93bcdc;
+  --color-blue: #2f6690;
+
+  --color-green: #90a959;
 
   --length-container-width: 30rem;
+
+  --shadow-shallow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  --shadow-deep: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+  --transition-duration: 0.3s;
 }
