@@ -1,9 +1,65 @@
 import clsPictureUrl from '../assets/cls/cover.jpg';
+import lonelyGuysDoNotWakePictureUrl from '../assets/lonely-guys-do-not-wake/cover.jpg';
 import { stripIndent } from 'common-tags';
 
-export const SONGS = [
+export const SONGS: {
+  name: string;
+  nickname?: string;
+  pictureUrl: string;
+  theme: {
+    '--color-background': string;
+    '--color-foreground': string;
+  };
+  lyrics: string;
+  embededIds: {
+    youtube: string;
+    spotify?: string;
+  };
+}[] = [
+  {
+    name: '孤單的人睡不醒',
+    nickname: 'lgcnw', // lonely guys cannot wake
+    pictureUrl: lonelyGuysDoNotWakePictureUrl,
+    theme: {
+      '--color-background': 'var(--color-lonely-guys-do-not-wake-bg)',
+      '--color-foreground': 'var(--color-lonely-guys-do-not-wake-theme)',
+    },
+    lyrics: stripIndent`
+      《孤單的人睡不醒》
+
+      曲：Jayson U
+      詞：Bryan U
+
+      渴睡到睡房草林密佈
+      稀客的客廳蚊蟲共舞
+      住進青苔
+      塵埃覆蓋
+      頑石也漸老
+      掀不開被鋪
+      書薄中捕捉失傳字母
+      衣帽間冒險未怕跌倒
+      長藤壁紙環抱
+      埋頭污糟廢土
+      門前積水
+      雪霜能自掃
+
+      棲息於這
+      一房半廳
+      生根於這
+      單身被席
+
+      沒苦需吐
+      無福要造
+      無心可痛
+      是我驕傲
+      `,
+    embededIds: {
+      youtube: 'BSAD4dvOUyM',
+    },
+  },
   {
     name: '我要為妳痴總掣',
+    nickname: 'cls',
     pictureUrl: clsPictureUrl,
     theme: {
       '--color-background': 'var(--color-yellow)',
@@ -37,13 +93,9 @@ export const SONGS = [
       狂填入數紙
       連密碼告知
       `,
+    embededIds: {
+      youtube: '9pO3JCWg264',
+      spotify: '5sqDSuaF9e33JnpYO78wIG',
+    },
   },
-] as {
-  name: string;
-  pictureUrl: string;
-  theme: {
-    '--color-background': string;
-    '--color-foreground': string;
-  };
-  lyrics: string;
-}[];
+];

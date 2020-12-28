@@ -2,18 +2,23 @@
   <section class="song fullpageish__section" :style="song.theme">
     <BackToHome class="song__back-to-home" />
     <div class="fullpageish__container fullpageish__container">
-      <Transition appear appear-active-class="fade-in-top">
-        <img :alt="`${song.name} picture`" :src="song.pictureUrl" class="song__picture" />
-      </Transition>
+      <img :alt="`${song.name} picture`" :src="song.pictureUrl" class="song__picture" />
       <h1 class="song__name">{{ song.name }}</h1>
 
       <div class="song__links">
-        <a href="https://www.youtube.com/watch?v=9pO3JCWg264" class="song__link" target="_blank" noopener noreferrer>
+        <a
+          :href="`https://www.youtube.com/watch?v=${song.embededIds.youtube}`"
+          class="song__link"
+          target="_blank"
+          noopener
+          noreferrer
+        >
           <i class="gg-film"></i>
         </a>
 
         <a
-          href="https://open.spotify.com/track/5sqDSuaF9e33JnpYO78wIG"
+          v-if="song.embededIds.spotify"
+          :href="`https://open.spotify.com/track/${song.embededIds.spotify}`"
           class="song__link"
           target="_blank"
           noopener
@@ -26,33 +31,37 @@
   </section>
   <section class="lyrics fullpageish__section">
     <div class="fullpageish__container">
-      <pre class="lyrics__lyric">{{ song.lyrics }}</pre>
       <h2>Lyrics</h2>
+      <pre class="lyrics__lyric">{{ song.lyrics }}</pre>
     </div>
   </section>
   <section
     id="lyrics-video"
     class="fullpageish__section"
-    style="--color-background: var(--color-black); --color-foreground: var(--color-white);"
+    style="--color-background: var(--color-dark-grey); --color-foreground: var(--color-white)"
   >
     <div class="fullpageish__container">
+      <h2>Music Video</h2>
       <div class="embed-container">
-        <iframe src="https://www.youtube.com/embed/9pO3JCWg264" frameborder="0" allowfullscreen></iframe>
+        <iframe
+          :src="`https://www.youtube.com/embed/${song.embededIds.youtube}`"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
       </div>
-      <h2>Lyrics Video</h2>
     </div>
   </section>
-  <section id="spotify" class="spotify fullpageish__section">
+  <section id="spotify" class="spotify fullpageish__section" v-if="song.embededIds.spotify">
     <div class="fullpageish__container">
+      <h2>Spotify</h2>
       <iframe
-        src="https://open.spotify.com/embed/track/5sqDSuaF9e33JnpYO78wIG"
+        :src="`https://open.spotify.com/embed/track/${song.embededIds.spotify}`"
         width="300"
         height="380"
         frameborder="0"
         allowtransparency="true"
         allow="encrypted-media"
       ></iframe>
-      <h2>Spotify</h2>
     </div>
   </section>
 </template>
@@ -130,6 +139,7 @@ export default defineComponent({
     border: 0.5rem solid var(--color-foreground);
     padding: 0.5rem;
     margin-bottom: 1rem;
+    min-width: 20rem;
   }
 }
 
