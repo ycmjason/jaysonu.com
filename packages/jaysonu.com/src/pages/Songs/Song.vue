@@ -139,7 +139,8 @@ export default defineComponent({
     border: 0.5rem solid var(--color-foreground);
     padding: 0.5rem;
     margin-bottom: 1rem;
-    min-width: 20rem;
+    width: 20rem;
+    max-width: 100%;
   }
 }
 
