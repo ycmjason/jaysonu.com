@@ -55,6 +55,7 @@ export const SONGS: {
       `,
     embededIds: {
       youtube: 'BSAD4dvOUyM',
+      spotify: '6yMxyuuZry50R4qsKlKZnD',
     },
   },
   {
