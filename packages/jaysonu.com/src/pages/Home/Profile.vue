@@ -23,6 +23,7 @@ export default defineComponent({
   setup() {
     return {
       links: [
+        { href: 'https://open.spotify.com/artist/13JcQ0BxNGeGznz44NpWeU?si=4Jw58FLvTyCz5jCGTI68jQ', icon: 'headset' },
         { href: 'https://www.instagram.com/the.jayson.u/', icon: 'instagram' },
         { href: 'https://www.youtube.com/channel/UCSFVGZGV7f3WicnJplfhwuA', icon: 'youtube' },
         { href: 'https://www.facebook.com/the.jayson.u/', icon: 'facebook' },

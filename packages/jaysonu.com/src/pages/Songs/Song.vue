@@ -13,7 +13,7 @@
           noopener
           noreferrer
         >
-          <i class="gg-film"></i>
+          <Icon name="film" />
         </a>
 
         <a
@@ -24,7 +24,7 @@
           noopener
           noreferrer
         >
-          <i class="gg-music-speaker"></i>
+          <Icon name="headset" />
         </a>
       </div>
     </div>
@@ -120,14 +120,6 @@ export default defineComponent({
   &__links {
     display: flex;
     align-items: center;
-  }
-
-  &__link {
-    margin-right: 1rem;
-
-    &:last-of-type {
-      margin-right: 0;
-    }
   }
 }
 
