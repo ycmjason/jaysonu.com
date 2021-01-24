@@ -1,6 +1,7 @@
-import clsPictureUrl from '../assets/cls/cover.jpg';
-import lonelyGuysDoNotWakePictureUrl from '../assets/lonely-guys-do-not-wake/cover.jpg';
 import { stripIndent } from 'common-tags';
+
+import clsPictureUrl from '@/pages/Songs/assets/cls/cover.jpg';
+import lonelyGuysDoNotWakePictureUrl from '@/pages/Songs/assets/lonely-guys-do-not-wake/cover.jpg';
 
 export const SONGS: {
   name: string;

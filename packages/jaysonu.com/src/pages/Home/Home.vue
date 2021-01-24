@@ -7,9 +7,9 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Profile from './Profile.vue';
-import Song from './Song.vue';
-import { SONGS } from '../Songs/constants/SONGS';
+import Profile from '@/pages/Home/Profile.vue';
+import Song from '@/pages/Home/Song.vue';
+import { SONGS } from '@/pages/Songs/constants/SONGS';
 
 export default defineComponent({
   components: { Profile, Song },

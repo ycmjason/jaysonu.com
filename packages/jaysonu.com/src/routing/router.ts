@@ -1,7 +1,8 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../pages/Home/Home.vue';
 import { watchEffect } from 'vue';
-import { SONGS } from '../pages/Songs/constants/SONGS';
+import { createRouter, createWebHistory } from 'vue-router';
+
+import Home from '@/pages/Home/Home.vue';
+import { SONGS } from '@/pages/Songs/constants/SONGS';
 
 export const router = createRouter({
   history: createWebHistory(),

@@ -68,10 +68,11 @@
 
 <script lang="ts">
 import { defineComponent, computed } from 'vue';
-import Icon from '../../components/Icon.vue';
-import { SONGS } from './constants/SONGS';
-import SmoothScrollLink from '../../components/SmoothScrollLink.vue';
-import BackToHome from '../../components/BackToHome.vue';
+
+import Icon from '@/components/Icon.vue';
+import { SONGS } from '@/pages/Songs/constants/SONGS';
+import SmoothScrollLink from '@/components/SmoothScrollLink.vue';
+import BackToHome from '@/components/BackToHome.vue';
 
 export default defineComponent({
   components: { Icon, SmoothScrollLink, BackToHome },
