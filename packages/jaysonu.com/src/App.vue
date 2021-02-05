@@ -1,9 +1,7 @@
 <template>
   <router-view></router-view>
   <footer class="footer fullpageish__section">
-    <div class="fullpageish__container">
-      2020 &copy; Jayson U
-    </div>
+    <div class="fullpageish__container">2021 &copy; Jayson U</div>
   </footer>
 </template>
 

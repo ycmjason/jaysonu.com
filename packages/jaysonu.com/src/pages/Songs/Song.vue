@@ -73,19 +73,21 @@ import Icon from '@/components/Icon.vue';
 import { SONGS } from '@/pages/Songs/constants/SONGS';
 import SmoothScrollLink from '@/components/SmoothScrollLink.vue';
 import BackToHome from '@/components/BackToHome.vue';
+import { urlify } from '@/utils/route';
 
 export default defineComponent({
   components: { Icon, SmoothScrollLink, BackToHome },
 
   props: {
-    songName: {
+    songUrlifiedName: {
       type: String,
       required: true,
     },
   },
 
   setup(props) {
-    const song = computed(() => SONGS.find(({ name }) => name === props.songName));
+    console.log(props.songUrlifiedName);
+    const song = computed(() => SONGS.find(({ name }) => urlify(name) === props.songUrlifiedName));
     return {
       song,
     };

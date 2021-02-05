@@ -2,8 +2,9 @@ import { stripIndent } from 'common-tags';
 
 import clsPictureUrl from '@/pages/Songs/assets/cls/cover.jpg';
 import lonelyGuysDoNotWakePictureUrl from '@/pages/Songs/assets/lonely-guys-do-not-wake/cover.jpg';
+import yloPictureUrl from '@/pages/Songs/assets/ylo/cover.jpg';
 
-export const SONGS: {
+type Song = {
   name: string;
   nickname?: string;
   pictureUrl: string;
@@ -16,8 +17,55 @@ export const SONGS: {
     youtube: string;
     spotify?: string;
   };
-}[] = [
-  {
+};
+
+const createSong = (song: Song) => song;
+
+export const SONGS = [
+  createSong({
+    name: 'Y 路',
+    nickname: 'ylo',
+    pictureUrl: yloPictureUrl,
+    theme: {
+      '--color-background': '#14143c',
+      '--color-foreground': '#f794cd',
+    },
+    lyrics: stripIndent`
+      《Y 路》
+
+      曲: Jayson U
+      詞: Jayson U, Bryan U
+
+      和你走過 那些路
+      和你傾過的通宵
+      天光 酒散了 才意識到
+      其實你是最好
+
+      和你一起感覺很好
+      沒想到會給你煩惱
+      分開的一剎如刀割心
+      我指是心如刀割
+
+      *數星星 它很漂亮
+      看猩猩 它走向象
+      巧驚驚 隻象來想撞我
+
+      冇陰公 咁走過來
+      到空中 狗亂咁吠
+      喊出聲 試問誰來援救我
+      凍飲加兩蚊*
+
+      如你今晚作感冒
+      頭痛咳嗽打乞嚏
+      分開的一剎情開朗心
+      我指是心情開朗
+      `,
+    embededIds: {
+      youtube: '6YdZD9JmbxE',
+      spotify: '7yWYoOBigkQQEgGTmrGa5d',
+    },
+  }),
+  createSong({
     name: '孤單的人睡不醒',
     nickname: 'lgcnw', // lonely guys cannot wake
     pictureUrl: lonelyGuysDoNotWakePictureUrl,
@@ -58,8 +106,8 @@ export const SONGS: {
       youtube: 'BSAD4dvOUyM',
       spotify: '6yMxyuuZry50R4qsKlKZnD',
     },
-  },
-  {
+  }),
+  createSong({
     name: '我要為妳痴總掣',
     nickname: 'cls',
     pictureUrl: clsPictureUrl,
@@ -99,5 +147,5 @@ export const SONGS: {
       youtube: '9pO3JCWg264',
       spotify: '5sqDSuaF9e33JnpYO78wIG',
     },
-  },
+  }),
 ];

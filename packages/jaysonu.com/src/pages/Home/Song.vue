@@ -12,8 +12,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, computed } from 'vue';
 
+import { urlify } from '@/utils/route';
 import Icon from '@/components/Icon.vue';
 
 export interface SongData {
@@ -37,7 +38,7 @@ export default defineComponent({
 
   setup(props) {
     return {
-      songLink: `/songs/${props.song.name}`,
+      songLink: computed(() => `/songs/${urlify(props.song.name)}`),
     };
   },
 });

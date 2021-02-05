@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 import Home from '@/pages/Home/Home.vue';
 import { SONGS } from '@/pages/Songs/constants/SONGS';
+import { urlify } from '@/utils/route';
 
 export const router = createRouter({
   history: createWebHistory(),
@@ -13,17 +14,17 @@ export const router = createRouter({
     },
     ...SONGS.map(({ nickname, name }) => ({
       path: `/s/${nickname}`,
-      redirect: { name: 'song', params: { songName: name } },
+      redirect: { name: 'song', params: { songUrlifiedName: urlify(name) } },
     })),
     {
       name: 'song',
-      path: '/songs/:songName',
+      path: '/songs/:songUrlifiedName',
       props: true,
       component: () => import('../pages/Songs/Song.vue'),
       beforeEnter(to, _from) {
-        const { songName } = to.params;
+        const { songUrlifiedName } = to.params;
 
-        if (typeof songName !== 'string' || !SONGS.map(({ name }) => name).includes(songName)) {
+        if (typeof songUrlifiedName !== 'string' || !SONGS.map(({ name }) => urlify(name)).includes(songUrlifiedName)) {
           return false;
         }
 
