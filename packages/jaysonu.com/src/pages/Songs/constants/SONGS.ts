@@ -3,6 +3,8 @@ import { stripIndent } from 'common-tags';
 import clsPictureUrl from '@/pages/Songs/assets/cls/cover.jpg';
 import lonelyGuysDoNotWakePictureUrl from '@/pages/Songs/assets/lonely-guys-do-not-wake/cover.jpg';
 import yloPictureUrl from '@/pages/Songs/assets/ylo/cover.jpg';
+import harPictureUrl from '@/pages/Songs/assets/har/cover.jpg';
+import futdanPictureUrl from '@/pages/Songs/assets/futdan/cover.jpg';
 
 type Song = {
   name: string;
@@ -22,6 +24,141 @@ type Song = {
 const createSong = (song: Song) => song;
 
 export const SONGS = [
+  createSong({
+    name: '點解香港有聖誕外國冇佛誕',
+    nickname: 'futdan',
+    pictureUrl: futdanPictureUrl,
+    theme: {
+      '--color-background': '#0E2455',
+      '--color-foreground': 'white',
+    },
+    lyrics: stripIndent`
+      《點解香港有聖誕外國冇佛誕》
+      曲/詞/編/唱：Jayson U
+
+      點解香港有聖誕 外國冇佛誕
+      點解點解 點解點解
+      點解香港有聖誕 外國冇佛誕
+      我想放假
+
+      又話要公平
+      又話要公正
+      咁請問下你 點樣解釋
+      外國冇清明
+      外國冇中秋
+      外國冇端午
+      外國冇重陽
+
+      點解香港有聖誕 外國冇佛誕
+      點解點解 點解點解
+      點解香港有聖誕 外國冇佛誕
+      我想放假
+
+      點解我哋咁鬼尊重外國嘅假期
+      但係外國一啲都唔尊重 唔俾面我哋
+      又話要平等 又話要公平
+      其實最唔平等就係你哋呢一班茂利
+      我哋香港人放假都只不過係為咗尊重下你
+      你哋skip晒我哋啲節日 我覺得極唔OK
+      嗱 一係咁吖 你下年開始啦
+      下年開始我就唔怪你地
+
+      點解香港有聖誕 外國冇佛誕
+      點解點解 點解點解
+      點解香港有聖誕 外國冇佛誕
+      我想放假
+
+      聽日就係佛誕啦
+      我好懷念佛誕有假放的日子
+      如果
+      如果命運俾我返返轉頭
+      我會選擇將佛誕帶入英國
+      我會選擇將重陽帶入英國
+      我會選擇將清明帶入英國
+
+      我想放假
+      `,
+    embededIds: {
+      youtube: 'SUFZ-L-y11k',
+    },
+  }),
+  createSong({
+    name: '獨木舟荒島釣蝦記',
+    nickname: 'har',
+    pictureUrl: harPictureUrl,
+    theme: {
+      '--color-background': '#0AAFBC',
+      '--color-foreground': 'white',
+    },
+    lyrics: stripIndent`
+      《獨木舟荒島釣蝦記》
+
+      曲：Jayson U
+      詞：Jayson U, Bryan U, friends on clubhouse
+      編：Jayson U
+      唱：Jayson U
+
+      無聊在獨木舟
+      聽海風正獨奏
+      猶如尋覓綠洲
+      要拋開一切紛憂
+
+      朝住荒島撐出去
+      未到就已感到疲累
+      還剩一海里缺乏糧水
+      唔 call 拯救隊！
+
+      撐呀撐呀撐呀 撐呀撐呀
+      撐呀撐呀撐呀 撐呀撐呀
+      撐呀撐呀撐呀 撐呀撐呀
+      天黑了嗎？
+
+      撐呀撐呀撐呀 撐呀撐呀
+      撐呀撐呀撐呀 撐呀撐呀
+      撐呀撐呀撐呀 撐呀撐呀
+      仲未到嗎？
+
+      我想釣蝦～
+
+      無聊在獨木舟
+      聽海風正獨奏
+      猶如尋覓綠洲
+      要拋開一切紛憂
+
+      朝住荒島撐出去
+      未到就已感到疲累
+      還剩一海里缺乏糧水
+      唔 Call 拯救隊！
+
+      撐呀撐呀撐呀 撐呀撐呀
+      撐呀撐呀撐呀 撐呀撐呀
+      撐呀撐呀撐呀 撐呀撐呀
+      天黑了嗎？
+
+      撐呀撐呀撐呀 撐呀撐呀
+      撐呀撐呀撐呀 撐呀撐呀
+      撐呀撐呀撐呀 撐呀撐呀
+      終於到啦！
+
+      我想釣蝦～
+
+      釣呀釣呀釣呀 釣呀釣呀
+      釣呀釣呀釣呀 釣呀釣呀
+      釣呀釣呀釣呀 釣呀釣呀
+      仲未有蝦
+
+      釣呀釣呀釣呀 釣呀釣呀
+      釣呀釣呀釣呀 釣呀釣呀
+      釣呀釣呀釣呀 釣呀釣呀
+      終於有蝦
+
+      蝦蝦蝦哈哈哈
+      `,
+    embededIds: {
+      youtube: 'Rf3mITHySUQ',
+      spotify: '1aZrcn0Hqf64z3lR4k7LBS',
+    },
+  }),
   createSong({
     name: 'Y 路',
     nickname: 'ylo',

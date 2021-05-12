@@ -10,6 +10,6 @@
   "author": "Jason Yu <me@ycmjason.com>",
   "license": "ISC",
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^4.0.0"
   }
 }
