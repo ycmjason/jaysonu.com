@@ -5,6 +5,7 @@ import lonelyGuysDoNotWakePictureUrl from '@/pages/Songs/assets/lonely-guys-do-n
 import yloPictureUrl from '@/pages/Songs/assets/ylo/cover.jpg';
 import harPictureUrl from '@/pages/Songs/assets/har/cover.jpg';
 import futdanPictureUrl from '@/pages/Songs/assets/futdan/cover.jpg';
+import sunshinePictureUrl from '@/pages/Songs/assets/sunshine/cover.jpg';
 
 type Song = {
   name: string;
@@ -24,6 +25,59 @@ type Song = {
 const createSong = (song: Song) => song;
 
 export const SONGS = [
+  createSong({
+    name: '陽光',
+    nickname: 'sunshine',
+    pictureUrl: sunshinePictureUrl,
+    theme: {
+      '--color-background': '#ADDBEB',
+      '--color-foreground': '#FDBD1F',
+    },
+    lyrics: stripIndent`
+      《陽光》
+      曲/編/唱：Jayson U
+      詞：Bryan U
+      
+      陽光　督促我起床
+      說最近不要　再走堂
+      陽光　若近來不忙
+      趁假日跟我　逛一趟
+      
+      很溫暖
+      不懂困倦
+      傾吐
+      散落片段
+      
+      很溫暖
+      笑聲普照在
+      這街角
+      老舊小店
+      
+      陽光　請趕快起床
+      逛腳踏車徑　到海傍
+      陽光　即使有多忙
+      有妳在　天氣最清朗
+      
+      很溫暖
+      不懂偶遇
+      只顧
+      每日碰面
+      
+      很溫暖
+      此刻方發現
+      那斑駁
+      已漸開遍
+      
+      陽光　准許妳躲藏
+      放假在家過　也不妨
+      陽光　今天要安躺
+      懶覺睡幾個　算釋放
+      `,
+    embededIds: {
+      youtube: 'shmMWNeD8PA',
+      spotify: '1WP33ZyceCEr7xasnJU8Iv',
+    },
+  }),
   createSong({
     name: '點解香港有聖誕外國冇佛誕',
     nickname: 'futdan',
@@ -80,6 +134,7 @@ export const SONGS = [
       `,
     embededIds: {
       youtube: 'SUFZ-L-y11k',
+      spotify: '2w90AOpKS4wWNqb1vq3QM7',
     },
   }),
   createSong({
